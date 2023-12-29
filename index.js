@@ -17,7 +17,14 @@ server.listen(8888, () => console.log('Listening on port 8888'));
 
 async function requestHandler(req, res) {
 
-  console.log(req);
+  // console.log(req);
+
+  const buf = await buffer(req)
+  // console.log(buf)
+  const txt = await text(req)
+  // console.log(txt)
+  const js = await json(req)
+  // console.log(js);
 }
 
 const shutDown = () => {
