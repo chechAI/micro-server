@@ -21,9 +21,9 @@ async function requestHandler(req, res) {
 }
 
 const shutDown = () => {
-  let run = false;
+  let closed = false;
   const gracefulShutdown = () => {
-    if (run) {
+    if (closed) {
       return;
     }
     console.log("Shutting down....");
@@ -31,7 +31,7 @@ const shutDown = () => {
       console.log("Server closed.")
     });
 
-    run = true;
+    closed = true;
   };
   process.on("SIGINT", gracefulShutdown);
   process.on("SIGTERM", gracefulShutdown);
