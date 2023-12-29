@@ -1,0 +1,24 @@
+{
+  "name": "micro-server",
+  "version": "1.0.0",
+  "description": "\"\"",
+  "main": "index.js",
+  "repository": "git@github.com:jermainedafoe/micro-server.git",
+  "author": "Jermaine Dafoe <etesfaye@hotmail.com>",
+  "license": "MIT",
+  "private": "false",
+  "scripts": {
+    "start": "nodemon micro -l tcp://0.0.0.0:8888",
+    "dev": "nodemon micro-dev -p 8888",
+    "prettier": "prettier ./**/*.js --write",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "micro": "^10.0.1",
+    "then-sleep": "^1.0.1"
+  },
+  "devDependencies": {
+    "micro-dev": "^3.1.0",
+    "nodemon": "^3.0.2"
+  }
+}
